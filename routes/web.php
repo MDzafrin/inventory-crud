@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    
+    return view('products.index', compact('product'))->with(request()->input('page'));
 });
+
+Route::reource('products', ProductController::class);
