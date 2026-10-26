@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,4 @@ Route::get('/', function () {
     return view('products.index', compact('product'))->with(request()->input('page'));
 });
 
-Route::reource('products', ProductController::class);
+Route::resource('products', ProductController::class);
